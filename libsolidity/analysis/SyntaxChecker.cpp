@@ -260,11 +260,8 @@ bool SyntaxChecker::visit(FunctionTypeName const& _node)
 	return true;
 }
 
-bool SyntaxChecker::visit(VariableDeclaration const& _declaration)
+bool SyntaxChecker::visit(VariableDeclaration const&)
 {
-	if (!_declaration.typeName())
-        m_errorReporter.syntaxError(_declaration.location(), "Use of the \"var\" keyword is disallowed.");
-
 	return true;
 }
 
